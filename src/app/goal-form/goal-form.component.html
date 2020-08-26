@@ -1,0 +1,49 @@
+<div class="container mb-3">
+    <!-- Material form subscription -->
+<div class="card">
+
+    <div class="card-body px-lg-5">
+
+        <!-- Form -->
+        <form (ngSubmit)="submitGoal()" #goalForm="ngForm" class="text-center" style="color: white;" action="#!">
+
+            <h3 class="text-dark">
+            Enter New Goal
+            </h3>
+
+            <!-- Name -->
+            <div class="md-form mt-3">
+                <input type="text" [(ngModel)]="newGoal.name" #name="ngModel" name="name" id="name" class="form-control" required>
+                <label for="name">Goal Name</label>
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger"><p>
+                    name is required !
+                </p></div>
+            </div>
+
+            <div class="md-form mt-3">
+                <textarea type="text" placeholder="  Goal Description" id="description" class="form-control" [(ngModel)]="newGoal.description" name="description" #description="ngModel" required></textarea>
+                <div [hidden]="description.valid || description.pristine" class="alert alert-danger"><p>
+                    Description is required !
+                </p></div>
+            </div>
+
+            <!-- E-mai -->
+            <div class="md-form">
+                <input type="date" id="completion" [(ngModel)]="newGoal.completeDate" name="completeDate" #completeDate="ngModel" class="form-control" required>
+                <label for="completion">Completion Date</label>
+                <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger"><p>
+                    Date is required !
+                </p></div>
+            </div>
+
+            <!-- Sign in button -->
+            <button class="btn btn-outline-success btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Add goal</button>
+
+        </form>
+        <!-- Form -->
+
+    </div>
+
+</div>
+<!-- Material form subscription -->
+</div>

@@ -1,0 +1,47 @@
+    
+<div class="card card-cascade wider reverse">
+
+    <div class="view view-cascade overlay">
+      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
+        alt="Card image cap" height="400">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+  
+    <div class="card-body card-body-cascade text-center">
+  
+      <div class="upcoming-goals">
+
+        <h1 class="card-title"><strong>My Goals</strong></h1>
+
+        <h4 class="card-title"><strong>Upcoming Goals</strong></h4>
+
+        <app-goal-form (addGoal)="addNewGoal($event)"></app-goal-form>
+
+        <div  *ngFor='let goal of goals; let i = index'>
+          <ul>
+            <li appStrikethrough>{{ goal.name }} due on {{ goal.completeDate | dateCount }} day(<span style="text-transform: lowercase;">s</span>)</li>
+
+        </ul>
+
+        <button type="button" (click)="toggleDetails(i)" class="btn btn-deep-orange">Toogel Details</button>
+  
+        <app-goal-detail *ngIf="goal.showDescription" [goals]='goals' (isComplete)="deleteGoal($event, i)"></app-goal-detail>
+
+        </div>
+
+        <p *ngIf='goals.length < 4'><strong><em> <u>NB :</u> less goals... get serious with life !</em></strong></p>
+
+
+        <a class="px-5 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
+        <a class="px-5 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
+        <a class="px-5 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
+    
+      </div>
+    
+    </div>
+  
+  </div>
+  <!-- Card -->
+

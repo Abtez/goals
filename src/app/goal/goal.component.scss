@@ -1,0 +1,47 @@
+
+li{
+    list-style-type: none;
+}
+
+h4{
+    text-decoration: underline;
+}
+
+.card-body{
+    width: 80%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    text-transform: capitalize;
+}
+
+.upcoming-goals{
+    border: 1px rgb(255, 165, 47);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 5px 10px rgb(255, 104, 4);
+    background-color: rgba(168, 106, 24, 0.719);
+    color: purple;
+    text-align: center;
+    font-size: 18px;
+}
+
+.upcoming-goals:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
+    background-color: #e74c3c;
+    color: black;
+    box-shadow: none;
+    border: none;
+}
+
+button{
+    border-radius: 15px;
+}
+
+button:hover{
+    color: black;
+    transform: scale(0.9);
+}

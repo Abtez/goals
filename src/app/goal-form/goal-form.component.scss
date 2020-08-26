@@ -1,0 +1,28 @@
+.card-header, .card{
+    background-color: rgba(168, 106, 24, 0.719);
+}
+
+label{
+    color: black;
+}
+
+textarea[type="text"]{
+    color: white;
+}
+
+textarea[type="date"]{
+    color: white;
+}
+
+::placeholder{
+    color: black;
+}
+
+input[type="text"]{
+    color: white;
+}
+
+button:hover{
+  transform: scale(0.9);
+  transition: all 0.3s ease-in;
+}
